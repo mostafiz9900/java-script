@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function dec2hex(){
+                var accum="";
+                for (var i=0;i<3;i++){
+                    var dec=document.convert.element[i].value;
+                    var notNum=Math.floor(dec);
+                    var toHex=toNum.toString(16);
+                    if(toHex.length==1){
+                        toHex="0"+toHex;
+                        
+                    }
+                    accum+=toHex;
+                    
+                }
+                document.convert.hex.value=accum;
+            }
+        </script>
+    </body>
+</html>
