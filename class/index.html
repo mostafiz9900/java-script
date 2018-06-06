@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div>
+    <form>
+    	<label>Name :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="name" required/> <br/><br/>
+        
+        
+        <label>Id : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        <input type="number" id="id" required/> <br/>
+        
+        <label></label><br/>
+        <input type="reset" value="reset"/> 
+          <input type="submit" value="Submit" onSubmit="sendFormData()"/>
+    </form>
+    <script>
+			function sendFormData() {
+				var value1="value1";
+				var value2="value2";
+				var counter="?para1" + value1 + "&para2" + value2;
+				window.location.href = "disply.html" + counter;
+				}
+    
+    </script>
+    
+    </div>
+</body>
+</html>
