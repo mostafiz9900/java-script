@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+	var student = ['mosta', 'sofiq', 50, 60, 70];
+	document.write(student[2]);
+	document.write("<hr/>");
+	
+	
+	for(i=0; i<student.length; i++) {
+		document.write(student[i]+"<br/>");
+		}
+		
+		document.write("<hr/>");
+////////////////////////////Way-2/////////////////////////
+		var student = new Array(5);
+		//document.write(student.length);
+	student[0]='mosta';
+		student[1]='sofiq';
+		student[2]=50;
+		student[3]=80;
+		student[4]=70;	
+		student[5]=40;
+		//document.write([student]);
+		document.write(student.length);
+	
+		document.write(student[i]+"<br/>");
+		/////////////////WAY-3//////////////////////
+		var myVar={firstName:'mosta', lastName:'Rahman', age:24, gender:'Male'};
+		document.write(myVar.firstName);
+		document.write("<hr/>");
+		
+		////////////////////joinArray/////////////////////////////
+		
+		var trees=new Array("Ele","pine","Oke");
+		var bigBush=trees.join(" | ");
+		document.write(bigBush);
+		
+		document.write("<hr/>");
+		//////////////////////type comment//////////
+		document.write(typeof trees);
+		document.write("<br/>");
+		
+		document.write(typeof bigBush);
+		
+		document.write("<br/>");
+		////////////////concatArray/////////////////
+		
+		var trees=new Array("Elm","pine","Oke");
+		var biggerBush=trees.concat("Maple","Sycamore");
+		var bigBush=trees.join();
+		document.write(biggerBush);
+		alert(bigBush);
+		
+		document.write("<br/>");
+		//////////////////////toString/////////////////
+		var name=['A','B', 'C'];
+		document.write(typeof name);
+		
+		var newName=name.toString();
+		document.write(newName);
+		document.write(typeof newName);
+		
+		document.write("<br/>");
+		//////////////sortArray///////////
+		var zoo=new Array("zebras", "lions","apes", "tiger")
+		zoo.sort();
+		var newZoo="";
+		for(var counter=0; counter<zoo.length;counter++){
+			newZoo+=(zoo[counter]+"<br/>");
+			}		
+			document.write("<P>Alphabetical Anomals<p>"+ newZoo);
+			
+			/////////////////reverse//////////////////
+			
+			document.write("<br/>");
+			var zoo=new Array("zebras", "lions","apes", "tiger")
+		zoo.reverse();
+		var newZoo="";
+		for(var counter=0; counter<zoo.length;counter++){
+			newZoo+=(zoo[counter]+"<br/>");
+			}		
+			document.write("<P>Alphabetical Anomals<p>"+ newZoo);
+			
+			/////////////////slice//////////////////////
+			
+			var abc =['A', 'B', 'C', 'D', 10,15,15,154,45,99]
+		document.write(abc.slice(4)+"<br/>");
+		
+		
+		
+		/////////////////push45////////
+		
+		var county=['bng', 'fanc'];
+			county.push("ind");
+			document.write(county);
+			
+					document.write("<br/>");
+			
+			var county=['bng', 'fanc','ind'];
+			county.unshift("hhhhhhhhhhhhhh");
+			document.write(county);
+		
+			
+			
+				document.write("<br/>");
+			
+			var countys=['bng', 'fanc','ind',12 ,12];
+			
+			document.write(countys.splice(1, 0, jarmani));
+		
+			
+	
+</script>
+</body>
+</html>

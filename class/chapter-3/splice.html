@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<button onClick="workingWithSplice">Click me</button>
+<p id="disply"></p>
+<script>
+	var  countyes=['Bangladesh', 'Pakishthan','India','Japan' , 'Farace','Katar'];
+	document.getElementById("disply").innerHTML = countyes;
+	function workingWithSplice(){
+		countyes.splice(2,0, "Germany");
+		document.getElementById("disply").innerHTML=countyes;
+		
+		}
+</script>
+
+</body>
+</html>
