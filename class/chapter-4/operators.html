@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body bgcolor="#CC66CC">
+	<script>
+    		var x = 30;
+			var y = 20;
+			var result = x+y;
+			document.write("Result:" + result);
+			
+			////////////////////////////
+			
+			document.write("<hr/>");
+			var fName = "Mosta";
+			var mName = "Fizur";
+			var lName = "Rahman";
+			
+			var fullName =(fName + " " + mName + " " + lName);
+			document.write(fullName);
+			
+			/////////////////////subString or negative operator////////////////
+			
+			document.write("<hr/>");
+			var p = 10;
+			var q = -p;
+			var result2 = p-q;
+			document.write("Result( P-Q) " + result2 );
+			document.write("<hr/>");
+			
+			//////////////multiply ////////////////
+			
+			var result3 =x*y;
+			document.write("Result" +result3 + "<hr/>");
+			
+			//////////////divder ////////////////
+			
+			var result4 =x/y;
+			document.write("Result" + result4 + "<hr/>");
+			
+			
+			//////////////Modulys ////////////////
+			
+			var result5 =x%y;
+			document.write("Result" + result5 + "<hr/>");
+			
+			
+			//////////////Modulys ////////////////
+			
+			var result5 =x%y;
+			document.write("Result" + result5 + "<hr/>");
+			
+			/*////////////////////++increment -- discriment///////////
+			++x;
+			--y;
+			p++;
+			q--;
+			document.write("x: " + x + "y" + y + "p:" + p + "q:" + q +"<hr/>");
+			*/
+			
+			////////////////         < opt////////////////////
+			document.write("<hr/>");
+			var result7 = x<y;
+			document.write("Result( x<y)" + result7);
+			
+			////////////////         >opt////////////////////
+			document.write("<hr/>");
+			var result8=x>y;
+			document.write("Result( x>y)" + result8);
+			
+			///////////////////////// <= lass then op////////////////////
+			document.write("<hr/>");
+			var result9=x<=y;
+			document.write("Result( x<=y)" + result9);
+			
+			///////////////////////// <= lass then op////////////////////
+			document.write("<hr/>");
+			var result10 = x >= y;
+			document.write("Result(x<=y)" + result10);
+			///////////////&& logical AND , == Test or Equal///////
+			document.write("<hr/>");
+			var m = 10;
+			var n = 5;
+			if ((m==10)&&(n==5)){
+				document.write("Above One  or Both Condition is true" );
+				}else{
+					document.write("Above One  or Both Condition is False");
+					}
+					
+					///////////////&& logical or , == Test or Equal///////
+			document.write("<hr/>");
+			var m = 10;
+			var n = 5;
+			if ((m==10)&&(n==44)){
+				document.write("Above One   Condition is true" );
+				}else{
+					document.write("Above One   Condition is False");
+					}
+					
+					
+					
+					///////////////== Test or Equality//////
+			document.write("<hr/>");
+			var ab = 10;
+			var cd = "10";
+			if (ab==cd){
+				document.write("Above Condition is true" );
+				}else{
+					document.write("Above  Condition is False");
+					}
+					
+						///////////////=== Test or Equality//////
+			document.write("<hr/>");
+			var ab = 10;
+			var cd = "10";
+			if (ab===cd){
+				document.write("Above Condition is true" );
+				}else{
+					document.write("Above  Condition is False");
+					}
+							///////////////=== Test or Equality//////
+			document.write("<hr/>");
+			var ab = 10;
+			var cd = 10;
+			if (ab===cd){
+				document.write("Above Condition is true" );
+				}else{
+					document.write("Above  Condition is False");
+					}
+					
+									///////////////!== Test or Equality//////
+			document.write("<hr/>");
+			var ab = 10;
+			var cd = 10;
+			if (ab!==cd){
+				document.write("Above Condition is true" );
+				}else{
+					document.write("Above  Condition is False");
+					}
+					
+					document.write("<hr/>");
+			var ab = 10;
+			var cd = "10";
+			if (ab!=cd){
+				document.write("Above Condition is true" );
+				}else{
+					document.write("Above  Condition is False");
+					}
+					
+				//= += -= *= /= %=
+				x= 10;//assign
+				x+=5;//x=15
+				x-=8;
+				x*=2;
+				x/=5;
+				x %=3;
+				document.write("<hr/>");
+				document.write("<hr/>");
+				/////Ternary opert/////////
+				var age=25;
+				var rs = age>20 ? true : false;
+				document.write("Result::::" + " " + rs + "<br/>");
+				
+				//////////
+				var age=25;
+				var wc = age>20 ?  "Welcome" : "Not permited";
+				document.write("Result::::" + " " + wc + "<br/>");
+					document.write("<hr/>");
+					
+						var age=25;
+							var wc = age>28 ?  "Welcome" : "Not permited";
+							document.write("Result::::" + " " + wc + "<br/>");
+								document.write("<hr/>");
+							
+    		document.write("<hr/>");
+		// typeof opt
+			var salary = 50000;
+			var name ="Mostafiz";
+			var satudent= ["sofie","mita","mortuja"];
+			var result = true;
+			var  abc;
+			var rs = null;
+			document.write("salary for Number" + " " + typeof salary + "<br/>");
+				document.write("salary for String" + " " + typeof name + "<br/>");
+					document.write("salary for Object" +" " + typeof satudent + "<br/>");
+					document.write("salary for Boolen" + " " + typeof result + "<br/>");
+					document.write("salary for Undefined" + " "+ typeof abc + "<br/>");
+						document.write("salary for Null" + " " + typeof rs + "<br/>");
+							document.write("<hr/>");
+							
+							
+							
+							//Delete opretore
+							var pp = [10,  20, 30, ];
+							delete (pp[0]);
+							//delete (pp[1]);
+							document.write(pp);
+    
+    </script>
+	
+</body>
+</html>
