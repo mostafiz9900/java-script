@@ -29,9 +29,49 @@
 			
 			//do while loop
 			
-			sum2=;
+			sum2=0;
+			var sn = 1;
+			var en = 10;
+			do{sum2+=sn;
+				sn++;
+				}
+			while(
+				sn <= en);
+				document.write("Sum Use do While loop:", " " + sum2 +"<br/>");
+				
+				//for loop
+	
+	sum3 =0;
+	var fName = 1;
+	var lName = 10;
+	for (fName; fName <= lName; fName++) {
+		sum3 += fName;
+		}
+		document.write("Sum Use for loop:", " " + sum3 +"<br/>");		
+				
+				
+				
+				//for in loop
+				
+	var numbers = [1,2,3,4,5,6,7,8,9,10];
+	var sum4 = 0;
+	for (var i in numbers){
+		sum4+=numbers[i];
+		}
+    	document.write("Sum Use for in loop:", " " + sum4 +"<br/>");
+		
+		//foctorial
+		
+		function functionOne(n){
+			if (n==0){
+				return 1;
+				
+				}else{
+					return n*functionOne(n-1);
+					}
+			}
+		document.write("", functionOne(n));
 			
-    	
     </script>
 </body>
 </html>

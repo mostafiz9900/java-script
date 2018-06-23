@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+	function shedWalls(front,side){
+		var front=prompt("How many feet across the front " ,"");
+		var side=prompt("How many feet along the side ", "");
+		var numFrond = (front*12*2)/8;
+		var numSide=(side*12*2)/8;
+		var total=numFrond+numSide;
+		var message="You will need " + total + "on by eight-inch ";
+		document.write(message);
+		}
+		 shedWalls();
+</script>
+</body>
+</html>
