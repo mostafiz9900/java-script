@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<style type="text/css">
+	h2{
+		font-size:18pt;
+		color:#666;
+		font-family:Verdana;
+		}
+	h3{
+		font-size:14pt;
+		color:#666;
+		font-family:Verdana;
+		background-color:#999;
+		}
+	
+	
+    	
+    </style>
+	
+</head>
+
+<body bgcolor="#ddd">
+
+<script>
+    	var acme=new object();
+			acme.management="Management coordinates everything"; 
+			acme.management=new Object();
+			acme.management.rand="Research and Development work s to development works new and better.";
+			acme.finance="Finance keeps track of the money";
+			acme.production="Peoduction makes the stuff";
+			acme.marketing="new Object()";
+			acme.marketing.sales="Sales contacts potential clients";
+			acme.fulfillment="Fulfillment delivers sold products";
+			
+			var display="<h2>First the properties of the acme object</h2>";
+			for (var counter in acme ){
+				display += counter +"<br/>";
+				
+				}
+			display += "<h3>And now the values of the properties of management and marketing</h3>";
+			display += "acme.management.rand";
+			display += "acme.marketing.sales";
+			document.write(display);
+			
+    </script>
+</body>
+</html>

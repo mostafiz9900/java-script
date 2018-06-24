@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hierarchy</title>
+	<style type="text/css">
+	h2{
+		font-size:18px;
+		color:#666
+		;
+		font-family:Verdana;
+		}
+	.clickNote{
+		font-size:12px;
+		font-weight:bold;
+		color:#0FF;
+		background-color:black;
+		font-family:Verdana;
+		
+		}
+	
+    	
+    </style>
+    <script>
+    	function doIt(){
+			window.document.petstore.puppy.value="Swissy";
+			window.document.petstore.clicker.value="I\'ve been click";
+			
+			}
+    </script>
+</head>
+
+<body bgcolor="#CCCC66;
+onLoad="javascript:window.document.petstore.reset()";>
+<h2>ggggggggggggggg</h2>
+<br/>
+<span class="clickNote">&nbsp Click the button: &nbsp</span>
+
+
+
+<form name="petstore">
+<input type="text" name="puppy">
+	<input type=" button" name="clicker" value="click on change"
+    onClick="doIt()">
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	
+</body>
+</html>
