@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+		var rose=new Image();
+		rose.src="image.jpg";
+		var roseDown=new Image();
+			roseDown.src="love.jpeg";
+			var alpha;
+			var beta;
+			function interval(){
+				alpha=window.setInterval("document.rose.src=roseDown.src",3000);
+				}
+				function timeOut(){
+					window.setTimeout("document.rose.src=rose.src", 5000);
+					window.clearInterval(beta);
+					}
+			
+</script>
+<table cellpadding="0" class="0" border="0" width="100%" height="100%" align="center">
+	<tr valign="middle">
+    	<td align="center"><img src="image.jpg" name="rose" alt="Rose" width="80" height="60">
+        <p>
+        <a href="#" onClick="interval()">interval</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" onClick=" timeOut()"> TimeOut</a>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" onClick=" clearTimeout()"> clearTimeout</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
