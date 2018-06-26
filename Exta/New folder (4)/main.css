@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	color:#36F;
+	 line-height:25px;
+	font-family:Arial;
+	font-size:20px:
+	
+	}
+.contain{
+	background:#0FF;
+	margin:0 auto;
+	padding:5px 10px;
+	width:800px;
+	height:auto;
+	
+	}
+.mainCotain{
+	background:#CCC;
+	min-height:500px;
+	padding:5px 10px;
+	
+	}
+.header, .footer{
+	background:#666;
+	padding:10px;
+	text-align:center;
+	
+	}
+.left{
+	background:#FF0;
+	width:30%;
+	min-height: 200px;
+	float:left;
+	
+	
+	}
+.right{
+	background:#FFF;
+	min-height: 200px;
+	width:70%;
+	float:left;
+	
+	}

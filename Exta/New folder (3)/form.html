@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<form>
+    	<label>First Name</label>
+        <input type="text" name="fistName" required>
+        <br/>
+        <label>Last Name</label>
+        <input type="text" name="lastname" required>
+         <br/>
+         <label>ID</label>
+         <input type="number" name="id">
+          <br/>
+         <label>Gender</label>
+        <input type="radio" name="gender" value="Male"> Male:
+         <input type="radio" name="gender" value="Female">Female:
+          <br/>
+          <label>Hobby</label>
+        <input type="checkbox" name="Hobby" value="reading"> Reading:
+         <input type="checkbox" name="Hobby" value="Writen">Writen:
+          <input type="checkbox" name="Hobby" value="Playing">Playing:
+            <br/>
+            <select name="Round" >
+            	<option>Select Round</option>
+                <option value="round-35">Round-35</option>
+                 <option value="round-36">Round-36</option>
+                  <option value="round-37">Round-37</option>
+                   <option value="round-38">Round-38</option>
+            </select>
+            <br/><br/>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Send" onSubmit="sendFormData()">
+    </form>
+</body>
+</html>

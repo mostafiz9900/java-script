@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:arial;
+	font-size:25px;
+	color:#9C0;
+	line-height:20px;
+	}
+.contain{
+	background:#666;
+	width:80%;
+	height:auto;
+	margin:0 auto;
+	}
+.mainContain{
+	background:#0F0;
+	min-height:400px;
+	margin:10px;
+	}
+.left{
+	background:#99C;
+	width:30%;
+	min-height:400px;
+	float:left;
+	}
+.right{
+	background:#390;
+	width:70%;
+	min-height:400px;
+	float:left;
+	}
+.header,.footer{
+	text-align:center;
+	padding:10px;}

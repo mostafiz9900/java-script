@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; outline:0; }
+.container{
+	background:#F3C;
+	padding:5px 10px;
+	margin:0 auto;
+	width:800px;
+	height:auto;
+	}
+body{
+	font-family:Arial;
+	font-size:18px;
+	color:#0C9;
+	line-height:25px;
+	}
+.mainContainer{
+	
+	background:#666;
+	padding:5px;
+	width:800px;
+	min-height:500px;
+	
+	}
+	.left{
+		background:#CCC;
+		width:30%;
+		min-height:500px;
+		float:left;
+		
+		}
+		.right{
+			background:#0F0;
+			width:70%;
+			min-height:500px;
+			float:left;
+		
+			
+			}
+.header, .footer{
+	background:#FF0;
+	padding:10px;
+	text-align:center;
+	}

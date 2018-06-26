@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family:Arial;  font-size:18px; line-height:25px;}
+.contain{background:#C6F; margin:0 auto; width:800px; height:auto; padding: 5px 10px; }
+.header, .footer{background:#666; margin:0 auto; text-align:center; min-height:50px; padding:5px 10px; }
+
+.mainContain{ background:#3F9; width:500px; min-height:500px; padding:5px 10px;}
+.left{ background:#ddd; float:left; width:30%; min-height:500px;}
+.right{background:#966; float:left; width:70%; min-height:500px; }

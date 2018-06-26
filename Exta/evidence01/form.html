@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form </title>
+</head>
+
+<body>
+	<div style="background:#666; width:500px; margin:0 auto; padding:10px;">
+   	  <form action="disply.html" style="padding:10px;">
+        	<label>Full Name</label>
+            <input type="text" name="fullname" required>
+            <p>
+            <label>ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" name="id">
+            <p>
+            <label>Gender</label>
+            <input type="radio" value="male">Male
+             <input type="radio" value="female">Fimale
+            <p>
+            <label>Hobby</label>
+            <input type="checkbox" value="reading">Reading
+            <input type="checkbox" value="writen">Writen
+            <input type="checkbox" value="play">Play
+        <p>
+            <select>
+            	<option>Select Round</option>
+                <option value="rount-33">Round-33</option>
+                <option value="rount-34">Round-34</option>
+                <option value="rount-35">Round-35</option>
+                <option value="rount-36">Round-36</option>
+                <option value="rount-37">Round-37</option>
+                <option value="rount-38">Round-38</option>
+                <option value="rount-39">Round-39</option>
+            </select>
+        <p>
+          <label>Message Box</label><p>
+          <textarea name="messageBox" rows="10px" cols="20px"></textarea>
+          <p>
+          <input type="reset" value="Reset">
+          <input type="submit" value="Send" onSubmit="sendFormData()">
+        </form>
+    </div>
+    <script>
+    	function sendFormData(){
+			var value1="value1";
+			var value2="value2";
+			var value3="value3";
+			var value4="value4";
+			var value5="value5";
+			var value6="value6";
+			queryString="?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4 + "&para5=" + value5 + "&para6=" + value6;
+			window.location.href="disply.html" + queryString;
+			}
+    </script>
+</body>
+</html>

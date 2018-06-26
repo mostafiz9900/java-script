@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div style="width:500px; margin:0 auto; background:#CCC;" > 
+   	<form action="disply.html" style="padding:10px">
+    	<label>Full Name</label>
+        <input type="text" name="name">
+      
+        <br/>
+        <label>ID</label>
+       <input type="numble" name="id">
+        <br/>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Send" onSuvmit=" sendFormData">
+        
+    </form>
+    </div>
+    <script>
+    	function sendFormData(){
+			var value1="value1";
+			var value2="value2";
+			queryString="?para1=" + value1 + "&para2=" + value2; 
+			window.location.href="disply.html" + queryString;
+			}
+    </script>
+   
+</body>
+</html>

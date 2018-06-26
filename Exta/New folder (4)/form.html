@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+<div style="width:500px; margin:0 auto; background:#F0C">
+	<form action="display.html" style="padding:10px">
+    	<label>Full Name</label>
+        <input type="text" name="fullname" required>
+        <br/>
+       	<label>ID</label>
+        <input type="number" name="id">
+        <br/>
+       	<label>Gender</label>
+     Male:<input type="radio" value="male">
+     Female:<input type="radio" value="female">
+     <br/>
+     	<label>Hobby</label>
+        <input type="checkbox" value="reading">Reading
+         <input type="checkbox" value="playing">Playing
+          <br/>
+          <select>
+          	<option>Select Round</option>
+            <option value="round-32">Round-32</option>
+            <option value="round-33">Round-33</option>
+            <option value="round-34">Round-34</option>
+            <option value="round-35">Round-35</option>
+            <option value="round-36">Round-36</option>
+            <option value="round-37">Round-37</option>
+          </select>
+          <br/>
+          <input type="reset" value="reset">
+          <input type="submit" value="send" onSubmit="sendFormData">
+
+    </form>
+    </div>
+    <script>
+    	function sendFormData(){
+		var value1="value1";
+		var	value2="value2";
+		var	value3="value3";
+		var	value4="value4";
+		var	value5="value5";
+			queryString="?para1=" + value1 + "&para2=" + value2 + "&para3=" + value3 + "&para4=" + value4 + "&para5=" + value5;
+			window.location.href="display.html" + queryString;
+			}
+    </script>
+</body>
+</html>

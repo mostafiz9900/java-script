@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+.contain{
+	background:#666;
+	margin:0 auto;
+	padding:5px 10px;
+	width:800px;
+	min-height:500px}
+	
+	.header, .footer{
+	background:#ddd;
+	padding:10px;
+	text-align:center;
+	}
+	
+.mainContain{
+	background:#06F;
+	min-height:400px;
+	}

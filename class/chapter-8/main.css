@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; outline:0;}
+body{
+	font-family:arial;
+	font-size:18px;
+	color:#444;
+	outline:25px;
+	}
+.contain{
+	background:#f0f0f0;
+	width:800px;
+	margin:0 auto;
+	}
+.mainContain{
+	background:#fff;
+	min-height:500px;
+	margin:10px;
+	padding:5px 10px;
+	}
+.header, .footer{
+	background:#CCC;
+	padding:10px;
+	text-align:center;
+	}
+
