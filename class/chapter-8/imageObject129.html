@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Image Objective</title>
+<script>
+	function changeIt(){
+		var c1=new Image();
+		var n=document.forms[0].hue.value;
+		n=parseInt(n);
+		c1.src="c3.webp"
+		document.images[n].src=c1.src;
+		
+		}
+</script>
+</head>
+
+<body>
+<table width="100%" height="40%" border cols="7" bgcolor="#cccccc">
+  <tr>
+    <td align="center" valign="middle">
+    <img src="c1.webp" name="c1" border="0" height="100">
+    </td>
+    <td align="center" valign="middle">
+    	<img src="c2.webp" name="c2" border="0" height="100">
+    </td>
+    <td>
+    	<img src="c3.webp" name="c3" border="0" height="100">
+    </td>
+    <td align="center" valign="middle">
+    	<img src="c4.webp" name="c4" border="0" height="100">
+    </td>
+    <td align="center" valign="middle">
+    	<img src="c5.webp" name="c5" border="0" height="100">
+    </td>
+    <td align="center" valign="middle">
+    	<img src="c6.webp" name="c6" border="0" height="100">
+    </td>
+    <td align="center" valign="middle">
+    	<img src="c7.webp" name="c7" border="0" height="100">
+    </td>
+  </tr>
+</table>
+<center>
+<form>
+	<input type="text" name="hue" size="1">
+    <p>
+    <input type="button" value="Click to change color og image:" onClick="changeIt()";>
+</form>
+</center>
+</body>
+</html>
