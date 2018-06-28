@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+	<script>
+    	function changeThem(){
+			parent.data.document.forms[0].elements[2].value="Hi Form Menu";
+			parent.header.document.forms[0].elements[1].value="Hello";
+			}
+    </script>
+</head>
+
+<body bgcolor="#666;">
+<h3>Header</h3>
+<form>
+	<input type="text"
+    <input type="button" value="SendTo" onClick="changeThem()">
+</form>
+</body>
+</html>
