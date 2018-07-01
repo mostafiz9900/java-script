@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+
+	<style>
+	body{
+		background-color:#999;
+		font-family:Verdana;
+		
+		}
+	h2{
+		font-size:24pt;
+		color:#09F;
+		font-weight:bold;
+		
+		}
+	
+	a{
+		color:#FFC;
+		font-size:10pt;
+		font-weight:bold;
+		text-decoration:none;
+		
+		}
+</style>
+	<script>
+    	function helpMe(){
+			alert('Help has arroved.\n-------------/n1.Turn on your monitor.\n2.Look at the monitor.\n3. Follow instructions.');
+			
+			}
+    </script>
+</head>
+
+<body onDblCllick="helpMe()";>
+<h2>Follow the instruction :<br/>(or ......)</h2>
+<ul>
+	<a href="#" onMouseOver="alert('As you move ocer the spot');">onMouseOver</a><p></p>
+    <a href="#" onMouseUp="alert('You have press Down to greet up');">onMouseUp</a><p></p>
+      <a href="#" onMouseDown="alert('You Can keep it down');">onMouseDown</a><p></p>
+        <a href="#" onClick="alert('Any click will do');">onClick</a><p></p>
+         <a href="#" onMouseOut=""="alert('First move over and then off');">onMouseOut</a><p></p>
+         <form>
+         	<input type="button" value="onMouseMove" onMouseMove="alert('Press enter or return--don\'t move the mouse!')">
+         </form>
+    
+</ul>
+</body>
+</html>

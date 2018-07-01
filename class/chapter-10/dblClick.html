@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script>
+    	function doubleUp(){
+			window.location="backPage.html";
+			}
+			function forwardTo(){
+				var alpha=history.forward();
+				}
+    </script>
+</head>
+
+<body bgcolor="#999933">
+<p>
+<h3>Remeber thes page!</h3>
+First double-click the top button that will take you to another site <br/>
+When you return to this page 
+<p>
+<form>
+	<input type="button" value="Tow Click Heree" onDblClick="doubleUp()"><p></p>
+    WHEN YOU return ,Click this button<br/>
+    
+    <input type="button" value="Go Forward" onClick="forwardTo()">
+    
+</form> 
+</body>
+</html>

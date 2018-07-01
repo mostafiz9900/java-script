@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Anchor Object and Hashes</title>
+<style>
+	body{
+		background-color:#999;
+		font-family:Verdana;
+		
+		}
+	h2{
+		font-size:24pt;
+		color:#09F;
+		
+		}
+	h3{
+		font-size:16pt;
+		color:#9C3;
+		}
+	a{
+		color:#FFC;
+		font-size:10pt;
+		font-weight:bold;
+		text-decoration:none;
+		
+		}
+</style>
+<script>
+	function countAnchors(){
+		alert("This script" + document.anchors.length+ "anchors");
+		}
+	function goAnchors(anchName){
+		location.hash=anchName;
+		} 
+</script>
+</head>
+
+<body onLoad="countAnchors();">
+<p></p>
+<h2>Top Level <a name="top"></a></h2>
+<a href="#" onMouseDown="goAnchors('one')">one</a>|
+<a href="#" onMouseOut="goAnchors('tow')">Tow</a>|
+<a href="#" onMouseMove="goAnchors('three')">Three</a>|
+<a href="#" onMouseOver="goAnchors('four')">Four</a>
+<p></p>
+<hr/>
+<p></p>
+<h3>Level One <a name="one"></a></h3>
+
+<p></p>
+<hr/>
+<p></p>
+<h3>Level Tow <a name="tow"></a></h3>
+
+<p></p>
+<hr/>
+<p></p>
+<h3>Level Three <a name="three"></a></h3>
+
+<p></p>
+<p></p><hr/>
+
+<p><a href="#" onMouseUp="goAnchors('top')">Top</a></p>
+<h3>Level Four <a name="four"></a></h3>
+
+
+
+
+</body>
+</html>
