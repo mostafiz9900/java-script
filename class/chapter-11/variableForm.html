@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Variable</title>
+<script>
+	function putBird(){
+		var state="New Bangladesh";
+		document.stateBird.state.value=state;
+		var bird="Doel";
+		document.stateBird.bird.value=bird;
+		
+		}
+</script>
+</head>
+
+<body bgcolor="#666666">
+<form name="stateBird">
+<input type="text" name="state" >State Name<br/>
+<input type="text" name="bird">Bird name<p></p>
+<input type="button" value="Bird button" onClick="putBird()";>
+	
+</form>
+</body>
+</html>

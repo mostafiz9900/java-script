@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text Box Math</title>
+	<script>
+    	function addEmUp(){
+			//var sum=document.calc.aOne.value + document.calc.aTwo.value;
+			//alert(sum)
+			var sum=parseFloat(document.calc.aOne.value)+parseFloat(document.calc.aTwo.value);
+			alert(sum)
+			}
+    </script>
+</head>
+
+<body bgcolor="#999999">
+<h4>Enter 2 number s and press the Sum button</h4>
+<form name="calc">
+	<input name="aOne" type="text"><p></p>
+    <input name="aTwo" type="text"><p></p>
+    <input type="button" value="Sum" onClick="addEmUp()">
+	
+</form>
+</body>
+</html>

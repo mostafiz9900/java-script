@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form and Element</title>
+
+<script>
+	function sendEm(){
+		var newDisplay="";
+		var myForm=document.enter.length;
+		for( var counter=0; counter<myForm; counter++){
+			newDisplay+=document.forms[0].elements[counter].value + "\n";
+		}
+		document.forms[1].elements[1].value=newDisplay;
+	}
+</script>
+</head>
+
+<body bgcolor="#666666" style="width:600px; height:auto; margin:0 auto;">
+<h3>Enter the ing
+formation</h3>
+<form name="enter">
+	<table border="0" cellpadding="3" cellspacing="0" width="auto" height="78">
+    	<tr>
+        	<td colspan="2"><input type="text" name="fName">
+            <span class="inBox">&nbsp;&nbsp;First Name</span>
+            </td>
+            <td colspan="2">
+            <input type="text" name="lName">
+            <span class="inBox">&nbsp;&nbsp;Last Name</span>
+            
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<input type="text" name="address">
+                <span>&nbsp;&nbsp;Address</span>
+            </td>
+            <td>
+            	<input type="text" name="city">
+                <span>&nbsp;&nbsp;City</span>
+            </td>
+            <td>
+            	<input type="text" name="state" size="2">
+                <span>&nbsp;&nbsp;State</span>
+            </td>
+            <td>
+            	<input type="text" name="zip" size="6">
+                <span>&nbsp;&nbsp;Zip Code</span>
+            </td>
+        </tr>
+        <tr>
+        	<td colspan="4">
+            	<input type="text" name="emale" >
+                <span>&nbsp;&nbsp;Email</span> 
+            </td>
+        </tr>
+    </table>
+	
+</form>
+<form name="transfer">
+<input type="button" value="Transfer Array" onClick="sendEm()"><p></p>
+<textarea rows="20" cols="80" name="gather"></textarea>	
+</form>
+</body>
+</html>
