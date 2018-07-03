@@ -5,9 +5,10 @@
 <title>Untitled Document</title>
 </head>
 
-<body>
+<body onLoad="chackPrimeNumbers(2,100)">
 	<script>
-    	function isPrime(num){
+    	
+		function isPrime(num){
 			var n=Math.sqrt(num);
 			for(i=2; i<=n; i++){
 				if(num%i==0)
@@ -15,17 +16,18 @@
 				}
 				return true;
 				}
-			function chackIsPrime(startNum , endNum){
-				for(startNum; startNum<=endNum; startNum++){
-					if(isPrime(startNum))
-					document.write(startNum+" " +"Prime Number");
-					document.write("<br/>");
-					}
-					else{
-						document.write(startNum+" " + "is not prime");
-						}
-					}
 				
+				
+			function chackPrimeNumbers(startNum, endNum){
+				for (startNum; startNum<=endNum; startNum++){
+					if(isPrime(startNum)){
+						document.writeln(startNum+" " + "Is Prime" + "<br/>");
+						}else{
+						document.writeln(startNum+ " " + "Is not prime" + "<br/>");
+							}
+						}
+						
+				}
 							
     </script>
 </body>
