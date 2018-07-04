@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function validationForm(){
+	var x=document.forms["myForm"]["fName"].value;
+	var y=document.forms["myForm"]["age"].value;
+	var p=document.forms["myForm"]["password"].value;
+	if(x==""){
+		alert("Name must be filled out");
+		return false;
+		}
+	if(y<18|| y>50){
+		alert("Age must be between 18 and 50");
+		return false;
+		}
+	if(p<4||p>8){
+		alert("Password must be between 4 and 8");
+		return false;}
+		}
+</script>
+</head>
+
+<body>
+<form name="myForm" onSubmit="return validationForm()">
+<input type="text" name="fName">Name
+<br/>
+<input type="number" name="age">Age
+<br/>
+<input type="password" name="password">Password
+<br/>
+<input type="submit" value="Submit">
+	
+</form>
+</body>
+</html>

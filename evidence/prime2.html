@@ -12,19 +12,17 @@
 				}
 				return true;
 				}
-				
-				
-				
-			
-			function checkPrineNembers(startNum, endNum){
-				for(startNum; startNum<=endNum; startNum++){
-					if(isPrime(startNum)){
-						document.writeln(startNum+ " " + "Is prime" + "<br/>");
-						}else{
-						document.writeln(startNum+ " " + "Is not prime"+"<br/>");}}}
+		function checkPrime(startNum, endNum){
+			for(startNum; startNum<=endNum; startNum++){
+				if(isPrime(startNum)){
+					document.writeln(startNum+ " " +"is prime" +"<br/>");
+					}else{
+						document.writeln(startNum+ " "+ "is not prime"+"<br/>");
+						}}}
     </script>
+    	
 </head>
 
-<body onLoad="checkPrineNembers(2,100)">
+<body onLoad="checkPrime(2,100)">
 </body>
 </html>
