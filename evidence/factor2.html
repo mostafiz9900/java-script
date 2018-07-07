@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+	var n;
+	function calculationfactor(n){
+		if(n==0){
+			return 1;
+			}else{
+				return n*calculationfactor(n-1)
+				}
+		}
+	var number=prompt("Enter a number","1");
+	alert(calculationfactor(number));
+	document.writeln("Factorial of a ("+number+")"+"is"+calculationfactor(number));
+</script>
+	
+	
+</head>
+
+<body onLoad="timeOn()">
+</body>
+</html>

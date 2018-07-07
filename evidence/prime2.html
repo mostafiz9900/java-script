@@ -6,23 +6,24 @@
 	<script>
     	function isPrime(num){
 			var n=Math.sqrt(num);
-			for(i=2; i<=n; i++){
-				if(num%i==0)
+			for(i=2; i<=n; i++)
+			if(num%i==0){
 				return false;
 				}
 				return true;
 				}
-		function checkPrime(startNum, endNum){
+		function cheakprimenumber(startNum, endNum){
 			for(startNum; startNum<=endNum; startNum++){
 				if(isPrime(startNum)){
-					document.writeln(startNum+ " " +"is prime" +"<br/>");
+					document.writeln(startNum+" "+"is prime"+"<br/>");
 					}else{
-						document.writeln(startNum+ " "+ "is not prime"+"<br/>");
-						}}}
+						document.writeln(startNum+ " "+"is not prime"+"<br/>");
+						}
+					}}
     </script>
     	
 </head>
 
-<body onLoad="checkPrime(2,100)">
+<body onLoad="cheakprimenumber(2,100)">
 </body>
 </html>
