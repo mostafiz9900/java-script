@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	select{
+		font-size:20px;
+		padding:3px;
+		cursor:pointer;
+		}
+	#state{
+		color:red;
+		}
+</style>
+</head>
+
+<body onLoad="validatiForm()">
+<div>
+	<form name="myForm" method="post" action="#" onSubmit="return validatiForm();">
+    <table>
+    	<tr>
+        	<td>Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        
+        <tr>
+        	<td>Emale</td>
+            <td><input type="text" name="emale"></td>
+        </tr>
+        
+        <tr>
+        	<td>Telephone</td>
+            <td>
+            <input type="text" name="telephone"><br>
+            <input type="checkbox" name="onCall" onClick="enableDisable(this);">Please do not call me.
+        	 </td>
+          </tr>
+            
+          <tr>
+        	<td>Select</td>
+            <td>
+            	<select name="rounde">
+                	<option> Round A Round</option>
+                	<option value="round-35"> Round-35</option>
+                    <option value="round-36"> Round-36</option>
+                    <option value="round-37"> Round-37</option>
+                    <option value="round-38"> Round-38</option>
+                    <option value="round-39"> Round-39</option>
+                </select>
+            </td>
+        </tr>
+        
+         <tr>
+        	<td>Comment</td>
+            <td><input type="text" name="comment"></td>
+        </tr>
+        
+         <tr>
+        	<td><input type="reset" name="reste" value="Reset"></td>
+            <td><input type="submit" name="submit" value="Send"></td>
+        </tr>
+        
+        <tr>
+        	<td></td>
+            <td>
+            	<div id="state"></div>
+            </td>
+        </tr>
+        
+        
+        
+    </table>
+    </form>
+    </div>
+
+
+<script>
+	function validatiForm(){
+		var name 		= document.myForm.name;
+		var emale		= document.myForm.emale;
+		var telephone	= document.myForm.telephone;
+		var onCall 		= document.myForm.onCall;
+		var rounde 		= document.myForm.rounde;
+		var comment		= document.myForm.comment;
+		
+		
+		if(name.value==""){
+			document.getElementById("state").innerHTML="Please Enter your name";
+			return false;
+			}
+			
+			if(emale.value==""){
+			document.getElementById("state").innerHTML="Please Enter your Email..";
+			return false;
+			}
+			
+			if(emale.value.indexOf("@",0)<0){
+			document.getElementById("state").innerHTML="Please Enter your valid Email Address ..";
+			return false;
+			
+			}
+			
+			
+				if(emale.value.indexOf(".",0)<0){
+			document.getElementById("state").innerHTML="Please Enter your valid Email Address..";
+			return false;
+			
+			}
+			
+			if(telephone.value==""&&onCall.checked==false){
+			document.getElementById("state").innerHTML="Please Enter your telephone..";
+			return false;
+			}
+			
+			if(rounde.selectedIndex<1){
+			document.getElementById("state").innerHTML="Please Select Rount..";
+			return false;
+			}
+			
+			if(comment.value==""){
+			document.getElementById("state").innerHTML="Please Enter Commit";
+			return false;
+			}
+		}
+		
+		
+</script>
+</body>
+</html>

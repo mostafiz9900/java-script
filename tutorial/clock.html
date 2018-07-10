@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div>
+	<span id="hour"></span>:
+    <span id="minute"></span>:
+    <span id="second"></span>
+</div>
+<div>
+	<script>
+    	function clock(){
+			var date=new Date();
+			var hour=date.getHours();
+			var minute=date.getMinutes();
+			var second=date.getSeconds();
+			
+			document.getElementById("hour").innerHTML=hour;
+			document.getElementById("minute").innerHTML=minute;
+			document.getElementById("second").innerHTML=second;
+			}
+			setInterval(clock,1000);
+    </script>
+</div>
+</body>
+</html>
