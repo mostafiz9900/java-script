@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form validation</title>
+<style>
+	label{
+		color:red;
+		}
+</style>
+</head>
+
+<body>
+<div>
+  <form name="mForm" action="#" method="post" onSubmit="return fVali();" onReset="res();">
+    	<table>
+        	<tr>
+            	<td>Gender</td>
+                <td>
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+                </td>
+                <td><label id="gend"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Education</td>
+                <td>
+                <input type="checkbox" name="ssc" value="ssc">SSC
+                <input type="checkbox" name="hsc" value="hsc">HSC
+                </td>
+                <td><label id="iedu"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Round</td>
+                <td>
+               <select name="roud">
+                	<option>Select a round</option>
+               		<option value="Round-35">Round-35</option>
+                    <option value="Round-36">Round-36</option>
+                    <option value="Round-37">Round-37</option>
+                   
+               </select>
+                </td>
+                <td><label id="rroud"></label></td>
+            </tr>
+            
+            <tr>
+            	<td><input type="reset" value="Reset"></td>
+                <td><input type="submit" value="Send"></td>
+            </tr>
+        </table>
+    </form>
+    
+  <script>
+  function res(){
+	  alert("Reset call");}
+    	function fVali(){
+			var dGender = document.forms["mForm"]["gender"].value;
+			var dEdu="";
+			if( document.forms["mForm"].ssc.checked){
+				dEdu+=document.forms["mForm"]["ssc"].value;
+				}
+			if( document.forms["mForm"].hsc.checked){
+				dEdu+=" , " + document.forms["mForm"]["hsc"].value;
+				}
+			var droud= document.forms["mForm"]["roud"].value;
+			//condioti
+			if(dGender==""){
+				document.getElementById("gend").innerHTML="select Gender";
+				return false;
+				}
+			  
+			if(!document.forms["mForm"].ssc.checked && !document.forms["mForm"].hsc.checked ){
+				document.getElementById("iedu").innerHTML="select your Education";
+				return false;
+				}
+				
+				
+				if(droud=="Select a round"){
+				document.getElementById("rroud").innerHTML="select Round";
+				return false;
+				}
+				
+				
+				
+				
+				else{
+					document.write("<h3>Gender :"+dGender +"</h3>")
+					document.write("<h3>Gender :"+dEdu +"</h3>")
+					document.write("<h3>Round :"+droud +"</h3>")
+					
+					}
+					}
+    </script>
+</div>
+</body>
+</html>

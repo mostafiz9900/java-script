@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	label{
+		color:red;
+		}
+	.head{
+	background-color:#ccc;
+	width:500px;
+	margin:0 auto;
+	padding:5px 10px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="head">
+    	<form  name="myForm" method="post" action="#" onReset="res();" onSubmit="return  validateForm();">
+        	<table>
+            	<tr>
+                	<td>Name</td>
+                    <td><input type="text" name="name"></td>
+                    <td><label id="iname"></label></td>
+                </tr>
+                
+                <tr>
+                	<td>Gender</td>
+                    <td>
+                    <input type="radio" name="gender" value="Male">Male:
+                    <input type="radio" name="gender" value="Female">Female:
+                    </td>
+                    <td><label id="igender"></label></td>
+                </tr>
+                
+                <tr>
+                	<td>Education</td>
+                    <td>
+                    <input type="checkbox" name="ssc" value="ssc">SSC
+                    <input type="checkbox" name="hsc" value="hsc">HSC
+                    </td>
+                    <td><label id="ieducation"></label></td>
+                </tr>
+                
+                
+                 <tr>
+                	<td>Round</td>
+                    <td>
+                   <select  name="rround">
+                   		<option>Select A Round</option>
+                   		<option value="Round-33"> Round-33</option>
+                        <option value="Round-34"> Round-34</option>
+                        <option value="Round-35"> Round-35</option>
+                        <option value="Round-36"> Round-36</option>
+                        <option value="Round-37"> Round-37</option>
+                      
+                   </select>
+                    </td>
+                    <td><label id="irround"></label></td>
+                </tr>
+                
+                <tr>
+                	<td><input type="reset" value="Reset"></td>
+                    <td><input type="submit" name="Send"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+        
+    <script>
+    	function res(){
+			alert("Reset call");
+			}
+			
+		function validateForm(){
+			var vName=document.forms["myForm"]["name"].value;
+			var vGender=document.forms["myForm"]["igender"].value;
+			var education="";
+			if(document.forms["myForm"].ssc.checked){
+				education+=document.forms["myForm"]["ssc"].value;
+				}
+
+				
+			if(document.forms["myForm"].hsc.checked){
+				education+=" , " + document.forms["myForm"]["hsc"].value;
+				}
+			var vRound=document.forms["myForm"]["rround"].value;
+			
+			////conditon
+			if(vName==""){
+				document.getElementById('iname').innerHTML="Enter name";
+				return false;
+				}
+			if(vGender==""){
+				document.getElementById("igender").innerHTML="Enter v Gender";
+				return false;
+				}
+				
+			if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked){
+				document.getElementById("ieducation").innerHTML="Enter education";
+				return false;
+				}
+			
+			if(vRound=="Select A Round"){
+				document.getElementById("irround").innerHTML="Enter vRound";
+				return false;
+				}
+				
+				
+				
+				
+				else{
+				document.write("<h2>Name :"+ vName +"</h2>");
+				document.write("<h2>Gender :"+ vGender +"</h2>");
+				document.write("<h2>Education :"+education +"</h2>");
+				document.write("<h2>Round :"+ vRound +"</h2>");
+				
+				}
+			}
+    </script>
+    </div>
+</body>
+</html>
