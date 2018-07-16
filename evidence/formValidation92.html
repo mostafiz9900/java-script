@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+.abc{
+	color:red;
+	}
+</style>
+</head>
+
+<body>
+        <table>
+             <form name="myForm" method="post" action="formValidation92.html" onsubmit="return fvalid()">
+                 <tr>
+                    <td><label>Name</label></td>
+                    <td>:</td>
+                    <td><input  type="text" name="fname" /></td>
+                     <td><label id="sName" class="abc"></label></td>
+                 
+                 </tr>
+                 
+                 
+                 
+                 <tr>
+                    <td><label>Gender</label></td>
+                    <td>:</td>
+                    <td>Male<input  type="radio" name="Gender" value="Male"/>
+                    Female<input  type="radio" name="Gender" value="Female"/></td>
+                     <td><label id="sGender" class="abc"></label></td>
+                 
+                 </tr>
+                 
+                 
+                 <tr>
+                    <td><label>Education</label></td>
+                    <td>:</td>
+                    <td>
+					SSC<input  type="checkbox" name="ssc" value="Ssc"/>
+                    HSC<input  type="checkbox" name="hsc" value="Hsc"/>
+					</td>
+                     <td><label id="sEducation" class="abc"></label></td>
+                 
+                 </tr>
+                 
+                 <tr>
+                    <td><label>Round</label></td>
+                    <td>:</td>
+                    <td><select name="Round">
+                       <option>Select the Round</option>
+                       <option>Round-35</option>
+                       <option>Round-36</option>
+                       <option>Round-37</option>
+                       <option>Round-38</option>
+                       <option>Round-39</option>
+                    </select></td>
+                     <td><label id="sRound" class="abc"></label></td>
+                 
+                 </tr>
+                 
+                 <tr>
+                    <td><label>Massege</label></td>
+                    <td>:</td>
+                    <td><textarea cols="20" rows="2" name="Massege"></textarea></td>
+                     <td><label id="sMassege" class="abc"></label></td>
+                 
+                 </tr>
+                 
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td><input  type="reset"  value="Reset"/>
+                    <input  type="submit"  value="Submit"/></td>
+                   
+                 
+                 </tr>
+             </form>
+        
+        </table>
+         
+         
+         
+         
+         
+          <script>
+                   function fvalid(){
+					   var vName=document.forms["myForm"]["fname"].value;
+					   var vGender=document.forms["myForm"]["Gender"].value;
+					   var vEducation="";
+					   if(document.forms["myForm"].ssc.checked){
+						   vEducation +=document.forms["myForm"]["ssc"].value;
+						   }
+					 if(document.forms["myForm"].hsc.checked){
+						   vEducation +=", "+document.forms["myForm"]["hsc"].value;
+						   }
+						   
+						   
+					 
+					   var vRound=document.forms["myForm"]["Round"].value;
+					   var vMassege=document.forms["myForm"]["Massege"].value;
+					   if(vName==""){
+						   document.getElementById('sName').innerHTML="Filled out your name";
+						   return false;
+						   
+						   }
+						   
+						  if(vName.length<4){
+						   document.getElementById('sName').innerHTML="Name input more 3 letters";
+						   return false;
+						   
+						   }  
+					    if(vGender==""){
+						   document.getElementById('sGender').innerHTML="Select your gender";
+						   return false;
+						   }
+						   
+						   if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked){
+						   document.getElementById('sEducation').innerHTML="Select your Education";
+						   return false;
+						   }
+						   
+						  if(vRound=="Select the Round"){
+						   document.getElementById('sRound').innerHTML="Select your Round";
+						   return false;
+						   }
+						   
+						  if(vMassege==""){
+						   document.getElementById('sMassege').innerHTML="Massege at least 10 letters";
+						   return false;
+						   }else{
+						   document.write("Name :"+vName + "<br>");
+						   document.write("Gender :"+vGender + "<br>");
+						   document.write("Education :"+vEducation + "<br>");
+						   document.write("Round :"+vRound + "<br>");
+						   document.write("Massege :"+vMassege + "<br>");
+						   
+						   }       
+					   }
+           </script>
+</body>
+</html>

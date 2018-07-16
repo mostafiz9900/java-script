@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+<style>
+	label{
+		color:red;
+		padding:5px;
+		}
+	option{
+		cursor:pointer;
+		
+		}
+</style>
+</head>
+
+<body>
+<div style="background-color:#ccc; margin:0 auto; width:500px; padding:5px;">
+<form action="#" name="myForm" onReset="res();" onSubmit="return validForm();" method="post">
+	<table>
+    	<tr>
+        	<td>Gender</td>
+            <td>
+            <input type="radio" name="gender" value="Male">Male:
+            <input type="radio" name="gender" value="Female">Female:
+            </td>
+            <td><label id="igender"></label></td>
+        </tr>
+        
+        <tr>
+        	<td>Education</td>
+            <td>
+            <input type="checkbox" name="ssc" value="ssc">SSC:
+            <input type="checkbox" name="hsc" value="hsc">HSC:
+            <input type="checkbox" name="bba" value="bba">BBA:
+            </td>
+            <td><label id="ieducation"></label></td>
+        </tr>
+        
+         <tr>
+        	<td>Round</td>
+            <td>
+            <select name="sRound">
+            	<option>Select a Round</option>
+                <option value="Round-33">Round-33</option>
+                <option value="Round-34">Round-33</option>
+                <option value="Round-35">Round-33</option>
+                <option value="Round-36">Round-33</option>
+                <option value="Round-37">Round-33</option>
+                <option value="Round-38">Round-33</option>
+                <option value="Round-39">Round-33</option>
+                <option value="Round-40">Round-33</option>
+                <option value="Round-41">Round-33</option>
+            </select>
+            </td>
+            <td><label id="isRound"></label></td>
+        </tr>
+        
+        <tr>
+        	<td><input type="reset" value="Reset"></td>
+            <td><input type="submit" value="Send"></td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+	<script>
+    	function res(){
+			alert("Call Reset");
+			}
+			
+			
+		function validForm(){
+			var gender = document.forms["myForm"]["gender"].value;
+			var ssc = document.forms["myForm"]["ssc"].value;
+			var gender = document.forms["myForm"]["gender"].value;
+			
+		if(gender==""){
+			document.getElementById("igender").innerHTML="Select Gender ";
+			return false;
+			}
+		
+		
+		if(ssc==""){
+			document.getElementById("ieducation").innerHTML="Select Education";
+			return false;
+			}
+		
+		if(sRound==""){
+			document.getElementById("isRound").innerHTML="Select Round";
+			return false;
+			}
+			
+			else{
+				document.write("Gender :" + gender);
+				document.write("Gender :" + ssc );
+				document.write("Round :" + sRound );
+				}
+			}	
+    </script>
+</div>
+</body>
+</html>
