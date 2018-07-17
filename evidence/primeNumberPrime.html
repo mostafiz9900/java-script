@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prime Number Print</title>
+</head>
+
+<body onLoad="checkisPrime(1, 200)">
+<script>
+		function isPrime(num){
+			var n = Math.sqrt(num);
+			for(i=0; i<=n; i++)
+			if(num%2==0){
+				return false;
+				}
+				return true;
+				}
+				
+		function checkisPrime(start, end){
+			for(start; start<=end; start++){
+				if(isPrime(start)){
+					document.write(start+ " " + "Is Prime");
+					document.write("<br/>");
+					}else{
+						document.write(start+ " " + "Is not Prime");
+						document.write("<br/>");
+						}
+					}}
+</script>
+</body>
+</html>

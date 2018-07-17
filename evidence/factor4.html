@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Factore</title>
+</head>
+
+<body>
+<script>
+	var n;
+	function factor(n){
+		if(n==0){
+			return 1;
+			}else{
+				return n*factor(n-1);
+				}
+		}
+		var number=prompt("Enter number","1");
+		alert(factor(number));
+		document.write(factor(number));
+</script>
+</body>
+</html>
