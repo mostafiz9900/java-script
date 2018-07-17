@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Make An Aarrary</title>
+</head>
+
+<body>
+<script>
+	var county =new Array ("BD","JP", "IND", "PAK","UK");
+	document.write(county +"<br/>");
+	
+	var county_1=county.sort();
+	document.write(county_1 +"<br/>");
+	
+	var county_2=county_1.reverse();
+	document.write(county_2 +"<br/>");
+	
+		county_2.unshift("us");
+		document.write(county_2 +"<br/>");
+		
+		county_2.shift();
+		document.write(county_2 +"<br/>");
+		
+		county_2.push("GER");
+		document.write(county_2 +"<br/>");
+		document.write("<hr/>");
+		
+		county_2.pop(1);
+		document.write(county_2 +"<br/>");
+		
+		county_2[1]="ggggggggHHHHHHHHHHHgggggg";
+		document.write(county_2 +"<br/>");
+		
+		
+		delete county_2[1]
+		document.write(county_2 +"<br/>");
+	
+	
+	
+	
+</script>
+</body>
+</html>
