@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Factor</title>
+</head>
+
+<body>
+<script>
+	var n;
+	function fac(n){
+		if(n==0){
+			return 1;
+			}
+			return n* fac(n-1);
+			}
+			
+		var num=prompt("Enter a number","1");
+		alert( fac(num));
+		document.write(fac(num));
+</script>
+
+<script language="javascript">
+var a=5;
+a=a++
+alert(a)
+</script>
+<script language="javascript">
+var a=5;
+a=++a
+alert(a)
+</script>
+
+<script language="javascript">
+var a=0;
+a=a++
+a++
+alert(a)
+</script>
+
+<script language="javascript">
+var fa=new Array("Banana","Orange","Lemon","Apple");
+var citrus=fa.join (" and ")
+document.write(citrus)
+</script>
+
+<script language="javascript">
+var fa=new Array("Banana","Orange","Lemon","Apple");
+var fb=fa.concat("Mango","Pineapple","Jackfruit");
+document.write(fb)
+</script>
+
+
+<script language="javascript">
+var fa=new Array("Banana","Orange","Lemon","Apple");
+var citrus=fa.reverse()
+document.write(citrus)
+</script>
+
+
+
+
+
+</body>
+</html>

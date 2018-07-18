@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	label{
+		color:red;
+		}
+</style>
+</head>
+
+<body>
+<div>
+	<form method="post" name="myForm" action="#" onReset="res();" onSubmit="return subm();">
+    	<table align="center">
+        	<tr>
+            	<td>Name</td>
+                <td><input type="text" name="name" ></td>
+                <td><label id="iname"></label></td>
+            </tr>
+            <tr>
+            	<td>Gender</td>
+                <td>
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+                </td>
+                <td><label id="igender"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Education</td>
+                <td>
+                <input type="checkbox" name="ssc" value="SSC">SSC
+                <input type="checkbox" name="hsc" value="HSC">HSC
+                </td>
+                <td><label id="iedu"></label></td>
+            </tr>
+            
+             <tr>
+            	<td>Round</td>
+                <td>
+                <select name="rou">
+                	<option>Select A Round</option>
+                    <option value="Round-36">Round-36</option>
+                     <option value="Round-37">Round-37</option>
+                      <option value="Round-38">Round-38</option>
+                       <option value="Round-39">Round-39</option>
+                </select>
+                </td>
+                <td><label id="irou"></label></td>
+            </tr>
+            
+            <tr>
+            	<td><input type="reset" value="Reset"></td>
+                <td><input type="submit" name="Send" ></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+    
+    <script>
+    	function res(){
+			alert("Call Reset ");
+			}
+			
+		function subm(){
+			var Name=document.forms['myForm']['name'].value;
+			var Gender=document.forms['myForm']['gender'].value;
+			var Education="";
+			var ssc=document.forms['myForm']['ssc'].value;
+			var hsc=document.forms['myForm']['hsc'].value;
+			
+				if(document.forms['myForm'].ssc.checked){
+					Education+=document.forms['myForm']['ssc'].value;
+					}
+					
+					if(document.forms['myForm'].hsc.checked){
+					Education +=" , " +document.forms['myForm']['hsc'].value;
+					}
+			var Round=document.forms['myForm']['rou'].value;
+			
+			
+			if(Name==""){
+				document.getElementById('iname').innerHTML="Enter Name";
+				return false;
+				}
+			else if(Name.length<6){
+				document.getElementById('iname').innerHTML="Enter 6 digit Name";
+				return false;
+				}
+				
+			else if(Gender==""){
+				document.getElementById('igender').innerHTML="Enter Gender";
+				return false;
+				}
+				
+			else if(!document.forms['myForm'].ssc.checked && !document.forms['myForm'].hsc.checked){
+				document.getElementById('iedu').innerHTML="Select Education";
+				return false;
+				}
+				
+				
+				if(Round=="Select A Round"){
+				document.getElementById('irou').innerHTML="Enter Name";
+				return false;
+				}
+				
+			else{
+				document.write("<h3>Name :"+ Name + "</h3>");
+				document.write("<h3>Gender :"+ Gender + "</h3>");
+				document.write("<h3>Gender :"+ Education + "</h3>");
+				document.write("<h3>Round :"+ Round + "</h3>");
+				}
+			}
+    </script>
+</div>
+</body>
+</html>
