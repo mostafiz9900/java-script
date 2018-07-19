@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation--19-7</title>
+<style>
+	label{
+		color:red;
+		}
+</style>
+</head>
+
+<body>
+	<div>
+    	<form name="myForm" method="post" action="#" onReset="res();" onSubmit="return formValid();">
+        	<table align="center">
+            	<tr>
+                	<td>Gender</td>
+                    <td>
+                    	<input type="radio" name="gen" value="Male">Male
+                        <input type="radio" name="gen" value="Female">Female</td>
+                    <td><label id="igen"></label></td>
+                </tr>
+                <tr>
+                	<td>Education</td>
+                    <td>
+                    	<input type="checkbox" name="ssc" value="ssc">SSC
+                        <input type="checkbox" name="hsc" value="hsc">HSC
+                     </td>
+                    <td><label id="iedu"></label></td>
+                </tr>
+                
+                 <tr>
+                	<td>Round</td>
+                    <td>
+                    	<select name="rou">
+                        	<option>Select A Round</option>
+                            <option value="Round-36">Round-36</option>
+                            <option value="Round-37">Round-37</option>
+                            <option value="Round-38">Round-38</option>
+                            <option value="Round-39">Round-39</option>
+                        </select>
+                    </td>
+                    <td><label id="irou"></label></td>
+                </tr>
+                
+                <tr>
+                	<td><input type="reset" value="Reset"></td>
+                    <td><input type="submit" value="Send"></td>
+                    <td><label></label></td>
+                </tr>
+            </table>
+        </form>
+        
+        <script>
+        	function res(){
+				alert("Call Rester");
+				}
+				
+			function formValid(){
+				var gender = document.forms['myForm']['gen'].value;
+				var education ="";
+				var ssc =document.forms['myForm']['ssc'].value;
+				var hsc =document.forms['myForm']['hsc'].value;
+				
+				if(document.forms['myForm'].ssc.checked){
+					education += document.forms['myForm']['ssc'].value;
+					}
+				if(document.forms['myForm'].hsc.checked){
+					education += " , " + document.forms['myForm']['hsc'].value;
+					}
+				var Round =document.forms['myForm']['rou'].value;
+				
+				
+				//Condition
+				if(gender==""){
+					document.getElementById('igen').innerHTML="Select Gender";
+					return false;
+					}
+				
+				else if(!document.forms['myForm'].ssc.checked && !document.forms['myForm'].hsc.checked){
+					document.getElementById('iedu').innerHTML="Select Education";
+					return false;
+					}
+				else if(Round=="Select A Round"){
+					document.getElementById('irou').innerHTML="Select Round";
+					return false;
+					}
+					
+					else{
+						document.write("<h2>Gender : " + gender + " </h2>");
+						document.write("<h2>Education : " + education + " </h2>");
+						document.write("<h2>Round : " + Round + " </h2>");
+						}
+				
+				}
+        </script>
+    </div>
+</body>
+</html>
