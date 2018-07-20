@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+<style>
+	label{
+		color:red;
+		}
+</style>
+</head>
+
+<body>
+<div>
+	<form action="disply.html" name="myForm" method="post" onReset="res();" onSubmit="return formValidate();">
+    	<table align="center">
+        	<tr>
+            	<td>User Name</td>
+                <td><input type="text"  name="name"></td>
+                <td><label id="iname"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Email</td>
+                <td><input type="email" name="mail"></td>
+                <td><label id="imail"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Password</td>
+                <td><input type="password" name="pass"></td>
+                <td><label id="ipass"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Gender</td>
+                <td>
+                <input type="radio" name="gen" value="Male">Male
+                <input type="radio" name="gen" value="Female">Female
+                </td>
+                <td><label id="igen"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Education</td>
+                <td>
+                <input type="checkbox" name="ssc" value="SSC">SSC
+                <input type="checkbox" name="hsc" value="HSC">HSC
+                </td>
+                <td><label id="iedu"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Round</td>
+                <td>
+                <select name="rou">
+                	<option>Select A Round</option>
+                    <option value="Round-36">Round-36</option>
+                    <option value="Round-37">Round-37</option>
+                    <option value="Round-38">Round-38</option>
+                    <option value="Round-39">Round-39</option>
+                </select>
+                </td>
+                <td><label id="irou"></label></td>
+            </tr>
+            
+            <tr>
+            	<td><input type="reset" value="Reset"></td>
+                <td><input type="submit" value="Send"></td>
+                <td><label></label></td>
+            </tr>
+        </table>
+    </form>
+    
+    <script>
+    	function res(){
+			alert("Call Reset");
+			}
+		function formValidate(){
+			var name=document.forms['myForm']['name'].value;
+			var email=document.forms['myForm']['mail'].value;
+			var password=document.forms['myForm']['pass'].value;
+			var gender=document.forms['myForm']['gen'].value;
+			var education="";
+			var ssc=document.forms['myForm']['ssc'].value;
+			var hsc=document.forms['myForm']['hsc'].value;
+				if(document.forms['myForm'].ssc.checked){
+					education+=document.forms['myForm']['ssc'].value;
+					}
+					if(document.forms['myForm'].hsc.checked){
+					education+=" , "+document.forms['myForm']['hsc'].value;
+					}
+			var Round=document.forms['myForm']['rou'].value;
+			
+			
+			if(name==""){
+				document.getElementById('iname').innerHTML="Enter Name";
+				return false;
+				}
+			else if(name.length<6){
+				document.getElementById('iname').innerHTML="Enter 6 carecter Name";
+				return false;
+				}
+			else if(email==""){
+				document.getElementById('imail').innerHTML="Enter email";
+				return false;
+				}
+				else if(email.indexOf("@",0)<0){
+				document.getElementById('imail').innerHTML="Enter @  email";
+				return false;
+				}
+				else if(email.indexOf(".",0)<0){
+				document.getElementById('imail').innerHTML="Enter . email";
+				return false;
+				}
+			else if(password==""){
+				document.getElementById('ipass').innerHTML="Enter password";
+				return false;
+				}
+				else if(password.length<6){
+				document.getElementById('ipass').innerHTML="Enter 6 password";
+				return false;
+				}
+			else if(gender==""){
+				document.getElementById('igen').innerHTML="Enter gender";
+				return false;
+				}
+			else if(!document.forms['myForm'].ssc.checked && !document.forms['myForm'].hsc.checked){
+				document.getElementById('iedu').innerHTML="Enter education";
+				return false;
+				}
+			else if(Round=="Select A Round"){
+				document.getElementById('irou').innerHTML="Enter Select A Round";
+				return false;
+				}
+				
+				else{
+					document.write("<h3>User Name :" + name + "</h3>");
+					document.write("<h3> Email :" + email + "</h3>");
+					document.write("<h3> Password :" + password + "</h3>");
+					document.write("<h3> Gender :" + gender + "</h3>");
+					document.write("<h3> Education :" + education + "</h3>");
+					document.write("<h3> Round :" + Round + "</h3>");
+					}
+			}
+    </script>
+</div>
+</body>
+</html>

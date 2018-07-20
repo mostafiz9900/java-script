@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Factor Checked</title>
+</head>
+
+<body>
+<script>
+	var n="";
+	function fact(n){
+		if(n==0){
+			return 1;
+			}
+			return n*fact(n-1);
+		}
+	var number=prompt("Enter A Number");
+	alert(fact(number));
+	document.write(fact(number));
+</script>
+</body>
+</html>
