@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+<style>
+	label{
+		color:red;
+		}
+</style>
+</head>
+
+<body>
+</body>
+	<div>
+    <form name="myForm">
+     	<table align="center">
+			<tr>
+            	<td>User Name</td>
+                <td><input type="text" name="name"></td>
+                <td><label id="iname"></label></td>
+            </tr>
+            
+            <tr>
+            	<td>Email</td>
+                <td><input type="email" name="mail"></td>
+                <td><label id="imail"></label></td>
+            </tr> 
+            
+            
+            <tr>
+            	<td>Password</td>
+                <td><input type="password" name="pass"></td>
+                <td><label id="ipass"></label></td>
+            </tr>               
+        </table>
+    </form>
+    <center>
+    	<button onClick="subm();">Submit</button>
+       <button onClick="res();">Reset</button>
+    </center>
+    <script>
+	var win;
+    	function res(){
+			win.close();
+			}
+		function subm(){
+			var UserName=document.forms['myForm']['name'].value; 
+			var mail=document.forms['myForm']['mail'].value; 
+			var Pass=document.forms['myForm']['pass'].value; 
+			
+			if(UserName==""){
+				document.getElementById("iname").innerHTML="Enter Name";
+				return  false;
+				}
+				else if(UserName.length <3){
+				document.getElementById("iname").innerHTML="Enter >3 Name";
+				return  false;
+				}
+				else{
+				document.getElementById("iname").innerHTML="";
+				  ;
+				}
+				
+			if(mail==""){
+				document.getElementById("imail").innerHTML="Enter mail";
+				return  false;
+				}
+				
+				else if(mail.indexOf("@",0)<0){
+				document.getElementById("imail").innerHTML="Enter @ mail";
+				return  false;
+				}
+				else if(mail.indexOf(".",0)<0){
+				document.getElementById("imail").innerHTML="Enter . mail";
+				return  false;}
+				else {
+				document.getElementById("iname").innerHTML="";
+				}
+				if(Pass==""){
+				document.getElementById("ipass").innerHTML="Enter mail";
+				return  false;
+				}
+				
+			else{
+				win=window.open("","","width=400");
+				
+				win.document.write("<h3>UserName : "+UserName+"</h3>");
+				win.document.write("<h3>Email : "+mail+"</h3>");
+				win.document.write("<h3>Password : "+Pass+"</h3>");
+				}
+			}
+    </script>
+    </div>
+</html>
